@@ -10,8 +10,52 @@
 <html>
 <head>
     <title>Title</title>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
 </head>
 <body>
+<div class="container">
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">账单信息</h4>
+        <p>欢迎使用账单记录系统</p>
+        <hr>
+        <br/>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Income</th>
+            <th scope="col">Expend</th>
+            <th scope="col">BillYear</th>
+            <th scope="col">BillMonth</th>
+            <th scope="col">BillDay</th>
+            <th scope="col">BillCategory</th>
+            <th scope="col">BillRemark</th>
+        </tr>
+        </thead>
+        <tbody>
+        <s:iterator var="bill" value="list" status="st">
+            <tr class="table-primary">
+                <th scope="row"><s:property value="id"/></th>
+                <td><s:property value="income"/></td>
+                <td><s:property value="expend"/></td>
+                <td><s:property value="billYear"/></td>
+                <td><s:property value="billMonth"/></td>
+                <td><s:property value="billDay"/></td>
+                <td><s:property value="billCategory"/></td>
+                <td><s:property value="remark"/></td>
+                <td><a href="deletebill.action?id=<s:property value="id"/>">delete bill</a>&nbsp;<a
+                        href="updatebill.action?id=<s:property value="id"/>">update bill</a></td>
+            </tr>
+        </s:iterator>
+        </tbody>
+    </table>
+</div>
 <div id="wrap">
     <div id="top_content">
         <div id="header">
@@ -29,7 +73,7 @@
         </div>
         <div id="content">
             <p id="whereami"></p>
-            <h1>Welcome!</h1>
+            <h1>Welcome!</h1><%--
             <table class="table" border=1>
                 <tr class="table_header">
                     <td>ID</td>
@@ -55,9 +99,9 @@
                                 href="updatebill.action?id=<s:property value="id"/>">update bill</a></td>
                     </tr>
                 </s:iterator>
-            </table>
+            </table>--%>
             <p>
-                <input type="button" class="button" value="Add bill"
+                <input type="button" class="btn-primary" value="Add bill"
                        onclick="location='toAdd.action'" />
             </p>
 

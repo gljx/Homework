@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.springframework:spring-expression:5.1.7.RELEASE" type="repository">
+    <properties include-transitive-deps="false" maven-id="org.springframework:spring-expression:5.1.7.RELEASE" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/5.1.7.RELEASE/spring-expression-5.1.7.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

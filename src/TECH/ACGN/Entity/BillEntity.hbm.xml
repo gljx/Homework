@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="TECH.ACGN.Entity.BillEntity" table="bill" schema="home_bill_db">
+        <id name="id" column="id"/>
+        <property name="income" column="income"/>
+        <property name="expend" column="expend"/>
+        <property name="billYear" column="bill_year"/>
+        <property name="billMonth" column="bill_month"/>
+        <property name="billDay" column="bill_day"/>
+        <property name="billCategory" column="bill_category"/>
+        <property name="remark" column="remark"/>
+    </class>
+</hibernate-mapping>

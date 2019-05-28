@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="Bill" extends="struts-default">
+        <action name="query" class="TECH.ACGN.Controller.QueryAction">
+            <result name="success">/WEB-INF/allBill.jsp</result>
+        </action>
+        <action name="addBill" class="TECH.ACGN.Controller.AddAction">
+            <result name="success" type="redirectAction">query</result>
+        </action>
+    </package>
+</struts>

@@ -10,7 +10,19 @@
             <result name="success">/WEB-INF/allBill.jsp</result>
         </action>
         <action name="addBill" class="TECH.ACGN.Controller.AddAction">
+            <result name="success" type="redirectAction">goadd</result>
+        </action>
+        <action name="deletebill" class="TECH.ACGN.Controller.DeleteAction">
             <result name="success" type="redirectAction">query</result>
+        </action>
+        <action name="update" class="TECH.ACGN.Controller.UpdateAction">
+            <result name="success" type="redirectAction">goupdate</result>
+        </action>
+        <action name="goadd" class="TECH.ACGN.Controller.Add">
+            <result name="success" type="dispatcher">/WEB-INF/addbill.jsp</result>
+        </action>
+        <action name="goupdate" class="TECH.ACGN.Controller.Add">
+            <result name="success" type="dispatcher">/WEB-INF/updatebill.jsp</result>
         </action>
     </package>
 </struts>

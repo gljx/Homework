@@ -15,6 +15,10 @@ public class BillEntity {
     private Integer billCategory;
     private String remark;
 
+    public BillEntity(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

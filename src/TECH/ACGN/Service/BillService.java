@@ -35,4 +35,16 @@ public class BillService {
     public int findTotalPage(int pagesize){
         return billDao.findTotalPage(pagesize);
     }
+
+    public boolean delete(BillEntity billEntity){
+        List<BillEntity> result=billDao.QueryByID(billEntity);
+        billEntity=result.get(0);
+        billDao.DeleteBill(billEntity);
+        return true;
+    }
+
+    public boolean Update(BillEntity billEntity){
+        billDao.Update(billEntity);
+        return true;
+    }
 }

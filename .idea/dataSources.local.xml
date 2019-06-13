@@ -11,5 +11,31 @@
       <user-name>root</user-name>
       <introspection-schemas>*:home_bill_db</introspection-schemas>
     </data-source>
+    <data-source name="noname-beanconfig.xml@1321/Hibernate" uuid="321f49d3-f83c-4d44-bc54-8da09590fecf">
+      <database-info product="MySQL" version="5.7.22-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <user-name>root</user-name>
+      <introspection-schemas>*:home_bill_db</introspection-schemas>
+    </data-source>
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="43eceac7-f0a6-4dae-b3fb-8138724a492d">
+      <database-info product="MySQL" version="5.7.22-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <user-name>root</user-name>
+      <introspection-schemas>*:home_bill_db</introspection-schemas>
+    </data-source>
+    <data-source name="dataSource" uuid="6df15a37-b1b0-49b1-89d7-dd7013d319cb">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="datasource" uuid="314734be-a965-44c7-892d-9e888194c330">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>root</user-name>
+    </data-source>
   </component>
 </project>

@@ -14,5 +14,20 @@ public class DeleteAction extends ActionSupport {
     @Resource(name="BillService")
     BillService billService;
 
-    BillEntity bill;
+    int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String execute() throws Exception {
+        System.out.println(id);
+        billService.delete(new BillEntity(id));
+        return SUCCESS;
+    }
 }

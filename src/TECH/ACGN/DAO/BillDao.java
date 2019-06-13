@@ -41,6 +41,7 @@ public class BillDao {
 
     public boolean DeleteBill(BillEntity billEntity){
         //todo
+        ht.delete(billEntity);
         return true;
     }
     //查询需求默认为0
@@ -71,9 +72,9 @@ public class BillDao {
         return result;
     }
 
-    public boolean Update(BillEntity old,BillEntity _new){
+    public boolean Update(BillEntity billEntity){
         //todo
-
+        ht.update(billEntity);
         return true;
     }
 
@@ -86,5 +87,15 @@ public class BillDao {
         }else {
             return rows/pageSize+1;
         }
+    }
+
+    public List<BillEntity> QueryByID(BillEntity billEntity){
+        String hql="from BillEntity bill where bill.id=:id";
+        Session session=sf.openSession();
+        Query query = session.createQuery(hql);
+        query.setParameter("id",billEntity.getId());
+        List<BillEntity> result=query.list();
+        session.close();
+        return result;
     }
 }
